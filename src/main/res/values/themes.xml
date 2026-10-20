@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        Базовая тема приложения.
+        Наследуется от Theme.SplashScreen из androidx.core:core-splashscreen.
+        Это даёт Splash Screen, который показывается пока приложение
+        загружает настройки из DataStore (защита от мигания темы).
+    -->
+    <style name="Theme.FormaMind" parent="Theme.SplashScreen">
+        <!-- Иконка на splash screen -->
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_round</item>
+        <!-- Фон splash screen -->
+        <item name="windowSplashScreenBackground">@android:color/background_dark</item>
+        <!-- Длительность splash (мс) -->
+        <item name="windowSplashScreenAnimationDuration">300</item>
+        <!-- Тема, которая применяется ПОСЛЕ splash -->
+        <item name="postSplashScreenTheme">@style/Theme.FormaMind.Main</item>
+    </style>
+
+    <!--
+        Основная тема приложения (применяется после splash).
+        Compose сам управляет цветами через MaterialTheme,
+        поэтому здесь задаём только базовые атрибуты.
+    -->
+    <style name="Theme.FormaMind.Main" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@android:color/background_dark</item>
+    </style>
+
+</resources>
