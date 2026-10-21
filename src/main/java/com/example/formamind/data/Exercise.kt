@@ -127,6 +127,28 @@ object DefaultExercises {
             durationSec = 180,
             instruction = "Вдох на четыре счёта, задержка на четыре, выдох на четыре, задержка на четыре. Три минуты.",
             orderIndex = 2
+        ),
+
+        // === КУРС "Фокус" ===
+        Exercise(
+            id = "focus_1",
+            courseId = "focus",
+            title = "Помодоро 25 минут",
+            description = "Работа 25 минут, отдых 5",
+            type = ExerciseType.TIMER,
+            durationSec = 1500,
+            instruction = "Выбери одну задачу. Работай 25 минут без отвлечений. Потом отдохни 5 минут.",
+            orderIndex = 1
+        ),
+        Exercise(
+            id = "focus_2",
+            courseId = "focus",
+            title = "Список отвлечений",
+            description = "Записывай мысли, которые уводят от задачи",
+            type = ExerciseType.JOURNAL,
+            durationSec = 0,
+            instruction = "Каждый раз, когда ловишь себя на отвлечении, запиши мысль в список. Вернись к задаче.",
+            orderIndex = 2
         )
     )
 
